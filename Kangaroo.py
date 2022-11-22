@@ -1,10 +1,10 @@
-class Goat:
+class Kangaroo:
 
-    byome='plain'
-    area=1.5
-    food='grass'
+    byome=['desert', 'plain', 'forest']
+    area=20
+    food=['oats', 'nuts', 'fruits', 'grass']
     predator=False
-    sound='Noone can stop me I feel like the greatest'
+    sound='GHR GHR GHR'
 
 
     def __init__(self, name, amountOfFood, age):

@@ -1,10 +1,10 @@
-class Monkey:
+class Goat:
 
-    byome='jungles'
-    area=50
-    food=['bananas', 'grape', 'gummy', 'bugs']
-    predator=True
-    sound='U A U'
+    byome='plain'
+    area=10
+    food='grass'
+    predator=False
+    sound='Noone can stop me I feel like the greatest'
 
 
     def __init__(self, name, amountOfFood, age):
