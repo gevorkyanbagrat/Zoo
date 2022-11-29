@@ -1,16 +1,18 @@
 class Monkey:
 
-    byome='jungles'
-    area=50
-    food=['bananas', 'grape', 'gummy', 'bugs']
-    predator=True
-    sound='U A U'
 
 
     def __init__(self, name, amountOfFood, age):
-        self.Name=name
-        self.Amount=amountOfFood
-        self.Age=age
+        self.__Name=name
+        self.__AmountOfFood=amountOfFood
+        self.__Age=age
+        self.__byome = 'jungles'
+        self.__area = 10
+        self.__Food = ['bananas', 'grape', 'gummy', 'bugs']
+        self.__predator = True
+        self.__sound = 'U A U'
+        self.__foodCount = 0
+        self.IsFeeded = False
 
 
     def DoSound(self, number):
@@ -18,4 +20,42 @@ class Monkey:
             print(self.Name, self.sound)
 
     def Eat(self, Food):
-        Food-=self.amountOfFood
+        if Food in self.__Food:
+            self.__foodCount += 1
+            if self.__foodCount == self.__AmountOfFood:
+                self.IsFeeded = True
+                print("Я наелся")
+        else:
+            print('Я не ем такое')
+
+    @property
+    def Name(self):
+        return self.__Name
+
+    @Name.setter
+    def Name(self, name):
+        self.__Name = name
+
+    @property
+    def Age(self):
+        return self.__Age
+
+    @Age.setter
+    def Age(self, value):
+        self.__Age = value
+
+    @property
+    def Byome(self):
+        return self.__Byome
+
+    @property
+    def Area(self):
+        return self.__area
+
+    @property
+    def Food(self):
+        return self.__Food
+
+    @Food.setter
+    def Food(self, unitOfFood):
+        self.__Food.append(unitOfFood)

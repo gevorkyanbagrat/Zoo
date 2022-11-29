@@ -24,6 +24,7 @@ class Goat:
             self.__foodCount+=1
             if self.__foodCount==self.__AmountOfFood:
                 self.IsFeeded=True
+                print("Я наелся")
         else:
             print('Я не ем такое')
         
