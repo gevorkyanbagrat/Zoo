@@ -7,7 +7,7 @@ class Monkey:
         self.__AmountOfFood=amountOfFood
         self.__Age=age
         self.__byome = 'jungles'
-        self.__area = 10
+        self.__area = 30
         self.__Food = ['bananas', 'grape', 'gummy', 'bugs']
         self.__predator = True
         self.__sound = 'U A U'

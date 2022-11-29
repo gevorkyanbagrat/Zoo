@@ -1,5 +1,6 @@
 from Goat import *
 from Monkey import *
+from Kangaroo import *
 goat1=Goat("Русик", amountOfFood=3, age=4)
 goat1.DoSound(5)
 print(goat1.Name)
@@ -23,4 +24,13 @@ monkey1.Eat('grape')
 monkey1.Eat('grape')
 monkey1.Eat('meat')
 print(monkey1.IsFeeded)
+
+kangaroo1=Kangaroo("Рамзес", amountOfFood=4, age=1)
+print(kangaroo1.Name)
+kangaroo1.DoSound(2)
+kangaroo1.Eat('oats')
+kangaroo1.Eat('oats')
+kangaroo1.Eat('oats')
+kangaroo1.Eat('oats')
+print(kangaroo1.IsFeeded)
 
