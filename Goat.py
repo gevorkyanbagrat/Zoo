@@ -8,17 +8,24 @@ class Goat:
         self.__Age=age
         self.__byome='plain'
         self.__area=10
-        self.__food=[grass']
+        self.__Food=['grass']
         self.__predator=False
         self.__sound='meeeee'
-        
+        self.__foodCount=0
+        self.IsFeeded=False
+
  
     def DoSound(self, number):
         for i in range(number):
-            print(self.Name, self.sound)
+            print(self.Name, self.__sound)
 
     def Eat(self, Food):
-        Food-=self.amountOfFood
+        if Food in self.__Food:
+            self.__foodCount+=1
+            if self.__foodCount==self.__AmountOfFood:
+                self.IsFeeded=True
+        else:
+            print('Я не ем такое')
         
     @property
     def Name(self):
