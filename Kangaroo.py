@@ -1,6 +1,6 @@
 class Kangaroo:
 
-
+#add classes
     def __init__(self, name, amountOfFood, age):
         self.__Name = name
         self.__AmountOfFood = amountOfFood
