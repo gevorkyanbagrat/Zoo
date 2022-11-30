@@ -1,11 +1,5 @@
 class Kangaroo:
 
-    byome=['desert', 'plain', 'forest']
-    area=20
-    food=['oats', 'nuts', 'fruits', 'grass']
-    predator=False
-    sound='GHR GHR GHR'
-
 
     def __init__(self, name, amountOfFood, age):
         self.__Name = name
