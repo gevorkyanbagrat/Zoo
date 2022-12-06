@@ -1,4 +1,4 @@
-class Goat:
+class Animals:
     
    
 
