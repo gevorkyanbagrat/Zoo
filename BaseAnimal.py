@@ -1,16 +1,17 @@
 class BaseAnimal:
-    def __init__(self, type,  name, age):
-        self.__Byome = None
+    def __init__(self, type,  name, age, biome, amountOfFood, area, food, predator, sound):
+        self.__Biome = biome
         self.__type = type
         self.__Name = name
-        self.__AmountOfFood = 0
+        self.__AmountOfFood = amountOfFood
         self.__Age = age
-        self.__area = 0
-        self.__Food = []
-        self.__predator = False
-        self.__sound = ""
+        self.__area = area
+        self.__Food = food
+        self.__predator = predator
+        self.__sound =  sound
         self.__foodCount = 0
-        self.IsFeeded = False
+        self.__IsFeeded = 0
+        self.__inAviary = 0
 
     def DoSound(self, number):
         for i in range(number):
@@ -23,7 +24,7 @@ class BaseAnimal:
             else:
                 self.__foodCount += 1
             if self.__foodCount == self.__AmountOfFood:
-                self.IsFeeded = True
+                self.__IsFeeded = True
                 print(self.__Name,"Я наелся")
             elif self.__foodCount > self.__AmountOfFood:
                 print(self.__Name,"я наелся и больше не буду")
@@ -54,12 +55,12 @@ class BaseAnimal:
     def Sound(self, sound):
         self.__sound=sound
     @property
-    def Byome(self):
-        return self.__Byome
+    def Biome(self):
+        return self.__Biome
 
-    @Byome.setter
-    def Byome(self, byome):
-        self.__Byome = byome
+    @Biome.setter
+    def Biome(self, biome):
+        self.__Biome = biome
 
     @property
     def Area(self):
@@ -87,4 +88,22 @@ class BaseAnimal:
     @amountOfFood.setter
     def amountOfFood(self, amountOfFood):
         self.__AmountOfFood=amountOfFood
+
+
+    @property
+    def predator(self):
+        return self.__predator
+
+    @property
+    def InAviary(self):
+        return self.__inAviary
+
+    @InAviary.setter
+    def InAviary(self, aviary):
+        self.__inAviary = aviary
+
+    @property
+    def IsFeeded(self):
+        return self.__IsFeeded
+
 
