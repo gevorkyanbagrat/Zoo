@@ -55,6 +55,7 @@ class Aviary:
                                 print(a.Name,"Я наелся")
                             else:
                                 a.foodCount += 1
+                                f.Food.remove(food)
                                 if a.foodCount == a.amountOfFood:
                                     a.IsFeeded = True
                                     print(a.Name, "Я наелся")
@@ -65,6 +66,15 @@ class Aviary:
         for i in self.__listOfAnimals:
             if i.IsFeeded == False:
                 print(i.Name, "хочет есть", i.Food, i.amountOfFood-i.foodCount)
+
+    def LeftFood(self):
+        for i in self.__feeders:
+            print (i.Food)
+
+    def DoSoundForAllAnimals(self, number):
+        for i in self.__listOfAnimals:
+            i.DoSound(number)
+
     @property
     def listOfAnimals(self):
         return self.__listOfAnimals

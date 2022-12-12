@@ -38,10 +38,12 @@ v.FullFeeders("meat", 5)
 v.Eat()
 v.FindWhoWantToEat()
 f2.TypeOfFood="oats"
-v.FullFeeders("oats",3)
+v.FullFeeders("oats",10)
 v.Eat()
 v.FindWhoWantToEat()
 v.Eat()
+v.DoSoundForAllAnimals(5)
+v.LeftFood()
 
 # print(v.Feeders[0].Food)
 # print(v.Feeders[1].Food)
