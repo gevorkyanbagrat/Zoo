@@ -105,5 +105,14 @@ class BaseAnimal:
     @property
     def IsFeeded(self):
         return self.__IsFeeded
+    @IsFeeded.setter
+    def IsFeeded(self, booli):
+        self.__IsFeeded = booli
 
+    @property
+    def foodCount(self):
+        return self.__foodCount
+    @foodCount.setter
+    def foodCount(self, value):
+        self.__foodCount=value
 
