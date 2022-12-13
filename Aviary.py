@@ -48,19 +48,20 @@ class Aviary:
                 for f in self.__feeders:
                     for food in f.Food:
                         if food in a.Food:
-                            if a.foodCount > a.amountOfFood:
-                                print(a.Name, "я наелся и больше не буду")
-                            elif a.foodCount == a.amountOfFood:
-                                a.IsFeeded = True
-                                print(a.Name,"Я наелся")
-                            else:
-                                a.foodCount += 1
-                                f.Food.remove(food)
-                                if a.foodCount == a.amountOfFood:
-                                    a.IsFeeded = True
-                                    print(a.Name, "Я наелся")
-                        else:
-                            print(a.Name,'Я не ем такое', food)
+                            a.Eat(food)
+#                             if a.foodCount > a.amountOfFood:
+#                                 print(a.Name, "я наелся и больше не буду")
+#                             elif a.foodCount == a.amountOfFood:
+#                                 a.IsFeeded = True
+#                                 print(a.Name,"Я наелся")
+#                             else:
+#                                 a.foodCount += 1
+#                                 f.Food.remove(food)
+#                                 if a.foodCount == a.amountOfFood:
+#                                     a.IsFeeded = True
+#                                     print(a.Name, "Я наелся")
+#                         else:
+#                             print(a.Name,'Я не ем такое', food)
 
     def FindWhoWantToEat(self):
         for i in self.__listOfAnimals:
