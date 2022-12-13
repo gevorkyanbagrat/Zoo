@@ -49,6 +49,8 @@ class Aviary:
                     for food in f.Food:
                         if food in a.Food:
                             a.Eat(food)
+                            if a.Eat(food)==1:
+                                f.Food.remove(food)
 #                             if a.foodCount > a.amountOfFood:
 #                                 print(a.Name, "я наелся и больше не буду")
 #                             elif a.foodCount == a.amountOfFood:
