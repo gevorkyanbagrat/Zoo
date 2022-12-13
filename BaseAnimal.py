@@ -21,15 +21,17 @@ class BaseAnimal:
         if Food in self.__Food:
             if self.__foodCount > self.__AmountOfFood:
                 print(self.__Name, "я наелся и больше не буду")
+                return 0
             else:
                 self.__foodCount += 1
+                return 1
             if self.__foodCount == self.__AmountOfFood:
                 self.__IsFeeded = True
                 print(self.__Name,"Я наелся")
-            elif self.__foodCount > self.__AmountOfFood:
-                print(self.__Name,"я наелся и больше не буду")
+                
         else:
-            print(self.__Name,'Я не ем такое')
+            print(self.__Name,'Я не ем такое', food)
+            return 0
 
 
     @property
