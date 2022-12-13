@@ -4,14 +4,11 @@ class Aviary:
         self.__area = area
         self.__biome = biome
         self.__feeders= []
-
         self.__listOfAnimals = []
 
     def AddAnimal(self, animal):
-
         if not(self.__area >= animal.Area and self.__biome in animal.Biome):
             print("этот зверь не подходит к такому вольеру1")
-
             return
 
         if len(self.__listOfAnimals) > 0:
@@ -21,7 +18,6 @@ class Aviary:
                 if not (self.__listOfAnimals[0].type == animal.type):
                     print("этот зверь не подходит к такому вольеру3")
                     return
-
         self.__listOfAnimals.append(animal)
         animal.inAviary = self
 
@@ -51,19 +47,7 @@ class Aviary:
                             a.Eat(food)
                             if a.Eat(food)==1:
                                 f.Food.remove(food)
-#                             if a.foodCount > a.amountOfFood:
-#                                 print(a.Name, "я наелся и больше не буду")
-#                             elif a.foodCount == a.amountOfFood:
-#                                 a.IsFeeded = True
-#                                 print(a.Name,"Я наелся")
-#                             else:
-#                                 a.foodCount += 1
-#                                 f.Food.remove(food)
-#                                 if a.foodCount == a.amountOfFood:
-#                                     a.IsFeeded = True
-#                                     print(a.Name, "Я наелся")
-#                         else:
-#                             print(a.Name,'Я не ем такое', food)
+#                            
 
     def FindWhoWantToEat(self):
         for i in self.__listOfAnimals:
