@@ -8,7 +8,7 @@ class BaseAnimal:
         self.__area = area
         self.__Food = food
         self.__predator = predator
-        self.__sound =  sound
+        self.__sound = sound
         self.__foodCount = 0
         self.__IsFeeded = 0
         self.__inAviary = 0

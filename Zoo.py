@@ -1,11 +1,10 @@
-from Aviaries import*
+from Aviary import*
 from BaseAnimal import*
-from Feeders import *
+from Feeder import *
 
 
 
-class Zoo(name):
-  
+class Zoo:
   def __init__(self, name):
     self.__name= name
     self.__aviaries = []
@@ -17,17 +16,17 @@ class Zoo(name):
   def AddCreatedAviary(self, aviary):
     self.__aviaries.append(aviary)
 
-  def ManageAnimal(self, animal, recentAviary, newAviary):
+  def ManageAnimal(self, animal, newAviary):
     for i in self.__aviaries:
-      if i == recentaviary:
+      if i == animal.inAviary:
         i.DeleteAnimal(animal)
       if i == newAviary:
         i.AddAnimal(animal)
         
-   def PrintListOfAnimals(self):
+  def PrintListOfAnimals(self):
       for i in self.__aviaries:
-        for a in i.ListOfAnimals:
-          print(a.type, a.name, "находится в ", i.name)
+        for a in i.listOfAnimals:
+          print(a.type, a.Name, "находится в ", i.Name)
         
         
        

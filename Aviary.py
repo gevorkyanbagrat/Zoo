@@ -12,8 +12,8 @@ class Aviary:
 
         elif len(self.__listOfAnimals) > 0:
             for i in self.__listOfAnimals:
-                if self.__listOfAnimals[i].IsPredator==True and animal.IsPredator==True and self.__listOfAnimals[i].type != animal.type:
-                    print("этот зверь не подходит к такому вольеру, т.к. хощники разного вида")
+                if i.predator == True and animal.predator == True and i.type != animal.type:
+                    print("этот зверь не подходит к такому вольеру, т.к. хищники разного вида", i.Name, animal.Name)
                 else:
                     self.__listOfAnimals.append(animal)
                     animal.inAviary = self
@@ -70,3 +70,7 @@ class Aviary:
     @property
     def Feeders(self):
         return self.__feeders
+
+    @property
+    def Name(self):
+        return self.__name

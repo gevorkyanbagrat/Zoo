@@ -3,6 +3,9 @@ from Monkey import *
 from Kangaroo import *
 from Aviary import *
 from Feeder import *
+from Zoo import *
+from Tiger import *
+from Lion import *
 
 g = Goat("Чик", 4)
 g2 = Goat("Варг", 3)
@@ -52,3 +55,32 @@ v.LeftFood()
 # print(v.listOfAnimals)
 # v.DeleteAnimal(g)
 # print(v.listOfAnimals)
+
+
+print("-"*100)
+z=Zoo("Самый крутой зоопарк этого мира")
+z.AddCreatedAviary(v)
+z.PrintListOfAnimals()
+
+l1=Lion("Jorsh", 3)
+l2=Lion("Katrin", 4)
+t1=Tiger("Ubuntu", 4)
+
+v2 = Aviary("Хищные разбойники-Львы", 100, "savanna")
+v2.AddAnimal(l1)
+v2.AddAnimal(l2)
+v2.AddAnimal(t1)
+
+v3 = Aviary("Хищные разбойники-Тигры", 100, "savanna")
+v3.AddAnimal(t1)
+v3.AddAnimal(l1)
+
+v4= Aviary("Рогатые неудачники", 100, "plain")
+
+z.AddCreatedAviary(v2)
+z.AddCreatedAviary(v3)
+z.AddCreatedAviary(v4)
+z.PrintListOfAnimals()
+z.ManageAnimal(g, v4)
+z.PrintListOfAnimals()
+z.
