@@ -27,6 +27,11 @@ class Zoo:
       for i in self.__aviaries:
         for a in i.listOfAnimals:
           print(a.type, a.Name, "находится в ", i.Name)
+          
+          
+  def WhoWantToEat(self):
+     for i in self.__aviaries:
+       i.FindWhoWantToEat()
         
         
        
